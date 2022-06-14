@@ -1,0 +1,51 @@
+{
+    "name": "olssonm/horizon-status",
+    "description": "Utility to check the status of Lavarel Horizon instances programmatically",
+    "authors": [
+        {
+            "name": "Marcus Olsson",
+            "email": "contact@marcusolsson.me"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.3|^8.0",
+        "laravel/horizon": "^5.0",
+        "illuminate/support": "^8.17|^9.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.23 || ^7.0",
+        "pestphp/pest": "^1.20",
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Olssonm\\HorizonStatus\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Olssonm\\HorizonStatus\\Test\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/pest --no-coverage",
+        "phpsniff": "vendor/bin/phpcs --standard=\"PSR12\" ./src --ignore=./src/resources/*",
+        "phpfix": "vendor/bin/phpcbf --standard=\"PSR12\" ./src --ignore=./src/resources/*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Olssonm\\HorizonStatus\\HorizonStatusServiceProvider"
+            ]
+        }
+    },
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
