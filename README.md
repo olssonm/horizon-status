@@ -1,3 +1,7 @@
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/olssonm/horizon-status.svg?style=flat-square)](https://packagist.org/packages/olssonm/horizon-status)
+[![Build Status](https://img.shields.io/github/workflow/status/olssonm/horizon-status/Run%20tests.svg?style=flat-square&label=tests)](https://github.com/olssonm/horizon-status/actions?query=workflow%3A%22Run+tests%22)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+
 # Laravel Horizon status checker
 
 Simple utility to check the current status of your Laravel Horizon instance programatically. 
