@@ -12,9 +12,9 @@ Why use this package if the Artisan command `horizon:status` is available? Becau
 
 ``` php
 // app/Console/Commands/HorizonIsRunning.php
-use Olssonm\HorizonStatus\Facade\HorizonStatus;
+use Olssonm\HorizonStatus\Facades\HorizonStatus;
 
-public function __handle() {
+public function handle() {
     if(!HorizonStatus::isActive()) {
         // Notify admin (not via the Horizon-queue of course...)
     }
@@ -42,7 +42,7 @@ Or perhaps you want to have a status-icon clearly visible directly in your blade
 composer require olssonm/horizon-status
 ```
 
-**Note** – This package requires Laravel Horizon running on either Laravel 8 or 9.
+**Note** – This package requires Laravel Horizon running on either Laravel 12 or 13.
 
 ## Usage
 
@@ -53,7 +53,7 @@ There are four methods available with this package.
 Returns one of the three available statuses, `active`, `inactive` or `paused`.
 
 ``` php
-use Olssonm\HorizonStatus\Facade\HorizonStatus;
+use Olssonm\HorizonStatus\Facades\HorizonStatus;
 
 HorizonStatus::status();
 // active
@@ -64,7 +64,7 @@ HorizonStatus::status();
 Return `true` or `false` whether status is `active`:
 
 ``` php
-use Olssonm\HorizonStatus\Facade\HorizonStatus;
+use Olssonm\HorizonStatus\Facades\HorizonStatus;
 
 HorizonStatus::isActive();
 // true
@@ -75,7 +75,7 @@ HorizonStatus::isActive();
 Return `true` or `false` whether status is `inactive`:
 
 ``` php
-use Olssonm\HorizonStatus\Facade\HorizonStatus;
+use Olssonm\HorizonStatus\Facades\HorizonStatus;
 
 HorizonStatus::isInactive();
 // false
@@ -86,7 +86,7 @@ HorizonStatus::isInactive();
 Return `true` or `false` whether status is `paused`:
 
 ``` php
-use Olssonm\HorizonStatus\Facade\HorizonStatus;
+use Olssonm\HorizonStatus\Facades\HorizonStatus;
 
 HorizonStatus::isPaused();
 // false
